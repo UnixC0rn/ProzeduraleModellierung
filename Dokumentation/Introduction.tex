@@ -75,7 +75,7 @@ linkcolor=green
 	\section*{\textcolor{rosa}{Nodes:}}
 	
 	\subsection*{Attribute:}
- 	\subsubsection*{Attribute Blur:}
+ 	\subsubsection*{\textit{Attribute Blur:}}
  	Verwischt Gleitkommaattribute, einschließlich Position, Farbe und Texturkoordinaten, von Punkten in einem Netz, wodurch eine Geometrie effektiv geglättet wird.
  	\begin{itemize}
  		\item Attributes - Welche Attribute verwischt werden sollen, wenn das Feld leer ist, macht die Node nichts
@@ -99,11 +99,11 @@ linkcolor=green
  		\end{itemize}
  	\end{itemize}
  	
- 	\subsubsection*{Attribute create:}
+ 	\subsubsection*{\textit{Attribute create:}}
  	Erstellt Attribute der Typen float, Integer, Vector oder String. Falls kein Variablen Name genannt wird, wird der Attribute Name genommen (Groß Buchstaben).\\
  	Value: Stamp ()	gibt eine stamping Variable eine meist danach liegenden Copy Node zurück
  	
- 	\subsubsection*{Attribute transfer}
+ 	\subsubsection*{\textit{Attribute transfer}}
  	Überträgt Scheitelpunkt-, Punkt-, Grundelement- und/oder Detailattribute zwischen zwei Modellen.
  	Die Übertragung funktioniert durch nähe und überträgt Attribute von einem Geometrie Teil auf die nächstliegende Punkte auf einem anderen Geometrieteil. \\
  	unter Attribute kann man die jeweiligen Attribute festlegen. Wenn das Feld leer oder ein Sternchen beinhaltet werden alle verfügbaren Attribute übertragen.
@@ -113,7 +113,7 @@ linkcolor=green
  		\item Blend Width - lockert den Distance Treshold und legt optional einen Bereich außerhalb des Distance Treshold fest, in dem der Einfluss der Quellattribute allmählich nachlässt.
  	\end{itemize}
  	
- 		\subsubsection*{Attribute Randomize:}
+ 	\subsubsection*{\textit{Attribute Randomize:}}
  	Diese Node generiert Zufallswerte, um ein Attribut zu erstellen oder zu ändern. Beispiel Parameter: 
  	\begin{itemize}
  		\item Gruppe – Die Teilmenge der Geometrie, deren Attribut geändert werden soll.
@@ -121,7 +121,7 @@ linkcolor=green
  		\item Gruppentyp - Der Gruppentyp, den Group angibt.
  	\end{itemize}
  	
- 	\subsubsection*{Attribute VOP:}
+ 	\subsubsection*{\textit{Attribute VOP:}}
  	Innerhalb der Node (Doppelklick auf die Node) befindet sich ein VOP Netzwerk. Mit Hilfe von Mathematischen Nodes (z.B. Multiply) lassen sich Attribute Modifizieren.
  	genutzte Nodes:
  	\begin{itemize}
@@ -144,7 +144,7 @@ linkcolor=green
  		\item geometryvopoutput - Platzhalter, um Attribut-VOP-Netzwerktypen herauszuschreiben
  	\end{itemize}
  	
- 	\subsubsection*{Attribute wrangle:}
+ 	\subsubsection*{\textit{Attribute wrangle:}}
  	entspricht der attribvop Node, aber anstatt des VOP Netzwerks werden hier VEX code Schnipsel genutzt. VEX(Vector Expression Language) ist die Coding Sprache die innerhalb Houdini Verwendet wird und auf C/C++ basiert.
  	Innerhalb des VEXpressions Fenster kann gecodet werden.
  	Verwendeter VEX Code:\\
@@ -203,14 +203,15 @@ linkcolor=green
  	\end{itemize}
 	
 	\subsection*{Digital Assets:}
-	
+	\subsubsection*{\textit{Subnet:}}
+	Die Subnet Node kann, wie der Name schon sagt, verwendet werden, um eine Menge an Knoten in einem Subnetz zu gruppieren. Man kann dann durch rechtsklick auf das Subnetz > 'Create Digital Asset', ein digital Asset erstellen. Diese werden in einer eigenen Datei mit .hda - extension gespeichert. Man kann damit eigene Netzwerke in eine personalisierte Node mit eigenem Interface erstellen. Bei Rechtsklick auf das Subnetz 'Parameters and Channels' > 'Edit Parameter Interface', öffnet sich eine Übersicht der existierenden Parameter. Dort können die gewünschten Parameter der gruppierten Nodes per 'Drag and Drop' hinzugefügt werden.
 	\subsection*{Group:}
-	\subsubsection*{Group Create:}
+	\subsubsection*{\textit{Group Create:}}
 	Erzeugt Gruppen von Punkten, Primitiven, Kanten oder Scheitelpunkten nach verschiedenen Kriterien.
 	\begin{itemize}
 		\item Base Group:	
 		\begin{itemize}
-			\item Base Group - gruppierende Muster, behandelt normale adhoc-Gruppen (keine dauerhafte gruppe, nur unmittelbar zur Lösung eines bestimmten Problems gebildet) Syntax
+			\item Base Group - gruppierende Muster, behandelt normale adhoc-Gruppen (keine dauerhafte Gruppe, nur unmittelbar zur Lösung eines bestimmten Problems gebildet) Syntax
 			\item create ordered - ordnet die Gruppe
 		\end{itemize}
 		\item Keep in Bounding Regions:
@@ -225,21 +226,21 @@ linkcolor=green
 	\end{itemize}
 
 	\subsection*{Import:}
-	\subsubsection*{Objekt Merge:}
+	\subsubsection*{\textit{Objekt Merge:}}
 	Ermöglicht das zusammenführen mehrerer Geometrien. Dadurch reicht es eine Blüte zu erstellen, die wir in allen Blumen Verwenden Können. Wir referenzieren dafür auf die Null-Node, die am Ende jeder Geometrie liegt.\\
 	Objekt 1 -> klicke auf 'Open floating operaor Chooser' -> wähle das Objekt (Null-Nodes)
 	
 	\subsection*{Labs > WorldBuilding > Tree:}
-	\subsubsection*{Tree\_Trunk\_Generator:}
+	\subsubsection*{\textit{Tree\_Trunk\_Generator:}}
 	Die Tree Trunk Generator Node ist eine einfache Node, um einen Baumstamm automatisiert erstellen zu können. Hier kann man einstellen, wie lang der Stamm sein soll und wie groß der Radius sein soll.
-	\subsubsection*{Tree\_Branch\_Generator:}
+	\subsubsection*{\textit{Tree\_Branch\_Generator:}}
 	Bei dieser Node ist der Aufbau und die Funktion komplett gleich wie bei dem Tree\_Trunk\_Generator. Was man aber hier anders einstellen kann, ist wie die Gravitation wirken soll. Ob die Äste nach oben, nach unten oder in eine bestimmte Richtung stehen sollen.
-	\subsubsection*{Tree\_Leaf\_Generator:}
+	\subsubsection*{\textit{Tree\_Leaf\_Generator:}}
 	Mit Hilfe dieser Node kann man die Punkte einstellen, an denen sich die Blätter am Ast befinden sollen. Man kann einstellen, wo genau die Blätter sein sollen und wie viele es sein sollen. 
 	
 	\subsection*{Manipulate:}
-	\subsubsection*{Bend:}
-	Mit der Transformation Node lässt sich das Objekt verschieben, vergrößern, skalieren und rotieren. Bend kann es dazu noch verformen und zum Beispiel biegen und verdrehen. Durch Setzen des Haken bei "Deform in Both Directions" wird die Verformung in beide Richtungen angewendet, welche als Default nur in eine Richtung geht. Um eine Verformung nutzen zu können, muss diese einfach nur aktiviert werden.\\
+	\subsubsection*{\textit{Bend:}}
+	Mit der Transformation Node lässt sich das Objekt verschieben, vergrößern, skalieren und rotieren. Bend kann es dazu noch verformen und zum Beispiel biegen und verdrehen. Durch Setzen des Haken bei 'Deform in Both Directions' wird die Verformung in beide Richtungen angewendet, welche als Default nur in eine Richtung geht. Um eine Verformung nutzen zu können, muss diese einfach nur aktiviert werden.\\
 	Möglichen Verformungen:
 	\begin{itemize}
 		\item Bend - Biegen
@@ -247,31 +248,31 @@ linkcolor=green
 		\item Length Scale - strecken(+) und stauchen(-)
 		\item Taper- Skalieren am Mittelpunkt
 	\end{itemize}
-	\subsubsection*{Mountain:}
+	\subsubsection*{\textit{Mountain:}}
 	Verschiebt Punkte entlang ihrer Normals basierend auf noise. Sie wird häufig verwendet um eine Ebene zufällig zu deformieren. Dies kann auf ein ganzes Objekt oder nur eine bestimmte Gruppe angewendet werden. Zu den wichtigsten Parametern gehören:
 	\begin{itemize}
 		\item height -> die Höhe der Verschiebung, also wie weit die Punkte von dem eigentlichen Objekt maximal entfernt sein dürfen
 		\item Element Size -> Die Distanz zwischen Spitzen der minimalen Noise
 		\item roughness -> Je höher der Wert, desto 'Spitzer' wird das Ergebnis.
 	\end{itemize}
-	\subsubsection*{Transform:}
+	\subsubsection*{\textit{Transform:}}
 	Mit der Transform Node, können Objekte beliebig transformiert werden. Dazu gehört das verschieben an eine beliebige Stelle der Szene, sowie das verkleinern, vergrößern oder rotieren in alle Richtungen.
 	
 	\subsection*{Material:}
-	\subsubsection*{Color:}
+	\subsubsection*{\textit{Color:}}
 	Mit der Color-Node kann man ein Objekt einfärben.
 	
 	\subsection*{NURBS:}
-	\subsubsection*{Skin:}
+	\subsubsection*{\textit{Skin:}}
 	setzt eine Haut auf eine Form, die eine Oberfläche definiert. Ebenso kann man auch zwischen zwei Oberflächen eine Haut erstellen.\\ 
 	Die Anzahl der eingehenden Objekte definiert dabei die Skinning-Methode. Bei nur einem Objekt wird 'Linear-skinning' verwendet, welches eine Haut über Querschnitte zieht. Bei mehreren eingehenden Objekt wird 'Vilineares Skinning' durchgeführt, welches eine Haut zwischen den Objekten zieht.
 	
 	\subsection*{Particle:}
-	\subsubsection*{Scatter:}
+	\subsubsection*{\textit{Scatter:}}
 	Diese Node verteilt neue Punkte in einem ungefähr gleichförmigen Muster über die Oberfläche und versucht optional, Klumpen und Löcher zu begrenzen. Bei Volumenprimitiven streut Scatter Punkte durch das Volumen mit einer Dichte proportional zum Feldwert (wobei negative Werte eine Wahrscheinlichkeit von Null ergeben).
 	
 	\subsection*{Polygon:}
-	\subsubsection*{Add:}
+	\subsubsection*{\textit{Add:}}
 	Mit add kann man entweder Punkte oder ein Polygon erstellen, oder man fügt Punkte/Polygone einem Input hinzu.\\
 	Points:
 	\begin{itemize}
@@ -280,7 +281,7 @@ linkcolor=green
 		\item w - weight (Gewicht), wenn die Punkte später zu einer spline (NURBS or Bezier) werden, beeinflusst das Gewicht die Form und kann dazu führen das sie rational wird
 	\end{itemize}
 	\includegraphics*[width=\textwidth]{graphics/add.JPG}
-	\subsubsection*{Boolean:}
+	\subsubsection*{\textit{Boolean:}}
 	Kombiniert entweder zwei Objekte mit Boolean Operatoren oder findet ihre Schnittlinie.\\
 	
 	Set	Treat As Solid -> Festes Objekt\\
@@ -315,15 +316,15 @@ linkcolor=green
 		\item custom	- Bei Festen Objekten mit überlappenden oder konzentrischen Flächen kann man Custom nutzen, um einen Bereich an einer gewissen tiefe auszuschneiden
 		\item detect	- durchläuft die ersten Geometrien und fügt optionale Gruppen und/oder Attribute hinzu, die die sich schneidende Polygone enthalten.
 	\end{itemize}
-	\subsubsection*{Facet:}
+	\subsubsection*{\textit{Facet:}}
 	Mit Facet kann man die Geometrie in Etappen ändern. Man kann z.B. Oberflächennormalen berechnen, bevor man Punkte, die von verschiedenen Polygonen geteilt werden, eindeutig macht. Das führt zum ungewöhnlichen Ergebnis einer glatten Schattierung und eines eindeutigen Punkts, da die Normalen berechnet werden, während die Punkte noch geteilt werden. 
-	\subsubsection*{Normal:}
+	\subsubsection*{\textit{Normal:}}
 	Dieser Knoten berechnet Punkt-, Scheitelpunkt-, Grundelement- oder Detailnormalen unter Verwendung eines genaueren Ansatzes als der Facettenknoten oder der Scheitelpunktknoten. Wird der 'Cusp Angle' auf 0 gesetzt, können die Kanten eckig gemacht werden.
-	\subsubsection*{PolyBevel:}
+	\subsubsection*{\textit{PolyBevel:}}
 	Polybevel fügt Verrundungspolygone zwischen Kanten und in Ecken ein, mit großer Kontrolle über die Form der Verrundung, durch die Anzahl an Divisions und der Distanz. Diese Node kann sehr komplexe Eingaben verarbeiten und ignoriert nicht-beitragende Kanten.
-	\subsubsection*{PolyExtrude:}
+	\subsubsection*{\textit{PolyExtrude:}}
 	Mit Poly Extrude kann man Flächen und Kanten 'herausziehen', um neue Spalten/Blätter von Polygonen zu erstellen. Man kann die Extrusion vergrößern oder verkleinern (Einsatz/Anfang) und verdrehen. 
-	\subsubsection*{PolyReduce:}
+	\subsubsection*{\textit{PolyReduce:}}
 	Polyreduce bietet eine sehr schnelle, hochpräzise Reduktion, während Form, Texturen, Attribute und Quad-Topologie der Eingabe so weit wie möglich beibehalten werden. Es hat mehrere Funktionen, mit denen Sie kontrollieren können, wo der Knoten verkleinert und umgeformt wird:
 	\begin{itemize}
 		\item Sie können verhindern, dass der Knoten ungeteilte Kanten im 3D- und UV- Raum verschiebt.
@@ -331,7 +332,7 @@ linkcolor=green
 		\item Sie können ein Attribut in Bereichen zeichnen, in denen Sie mehr Dichte beibehalten möchten. 
 		\item Sie können Polygone basierend auf der Sichtbarkeit von bestimmten Ansichtspunkten aus beibehalten. 
 	\end{itemize}
-	\subsubsection*{Remesh:}
+	\subsubsection*{\textit{Remesh:}}
 	Rekreiert die Fläche mit 'hochwertigen' (fast gleichseitigen) Dreiecken (hochwertiges dreiecksnetz = alle Winkel so nah wie möglich an 60 Grad). Dabei wird versucht in jedem Dreieck den kleinsten Winkel zu maximieren.
 	Es gibt zwei Arten von Remeshing:
 	\begin{itemize}
@@ -344,7 +345,7 @@ linkcolor=green
 		\item Smoothing - grad der Glättung
 	\end{itemize}
 	
-	\subsubsection*{Subdivide:}
+	\subsubsection*{\textit{Subdivide:}}
 	nimmt eine Polygon Fläche und teilt jeden Bereich, um die Fläche zu glätten.
 	\begin{itemize}
 		\item Groups - Alle Polygone in der linken Eingabe, werden verwendet, um das zu unterteilende Polygonnetz zu bestimmen.
@@ -353,16 +354,16 @@ linkcolor=green
 	\end{itemize}
 	
 	\subsection*{Primitive:}
-	\subsubsection*{Box:}
+	\subsubsection*{\textit{Box:}}
 	Ein einfaches/-r Quadrat/Quader.
-	\subsubsection*{Grid:}
+	\subsubsection*{\textit{Grid:}}
 	Erstellt eine flache Ebene, die aus einem Netz, Bezier- und NURBS-Flächen oder mehreren Linien mit offenen Polygonen bestehen kann. Häufig genutzte Parameter:
 		\begin{itemize}
 			\item Size - Breite und Höhe des Rasters.
 			\item Rows - Anzahl der Reihen im Raster oder Rumpf. 
 			\item Column - Anzahl der Spalten im Raster oder Rumpf.
 		\end{itemize}
-	\subsubsection*{Line:}
+	\subsubsection*{\textit{Line:}}
 	Erstellt ein Polygon oder eine Linie.
 	\begin{itemize}
 		\item Primitive Type - Geometrie Typ  
@@ -371,7 +372,7 @@ linkcolor=green
 		\item Length - Länge der Linie
 		\item Points - Anzahl der Punkte mit der die Linie erstellt wird
 	\end{itemize}
-	\subsubsection*{L-System:}
+	\subsubsection*{\textit{L-System:}}
 	Das Lindenmeyer-System ist ein Algorithmus zum Umschreiben von Zeichenfolgen. Einfach gesagt ersetzt der Algorithmus nach einer bestimmten Regel Zeichen durch andere Zeichen bzw. Zeichenketten.
 	Durch Verwendung von Iterationen, wobei die Ergebnisse zur Grundlage der nächsten Iteration werden, kann man ein Wachstum darstellen. In unserem Fall nutzen wir sie, um Blumen und deren Verzweigungen am Stängel herzustellen. 
 	\begin{itemize}
@@ -409,9 +410,9 @@ linkcolor=green
 			\item +(a) - rotiert nach rechts um a grad
 		\end{itemize}
 	\end{itemize}
-	\subsubsection*{Sphere:}
+	\subsubsection*{\textit{Sphere:}}
 	Sphere ist eine einfache Node, die ein Kugel Objekt erstellt. Man kann bei dem Primitive Type einstellen, welche Oberfläche die Kugel haben soll. Man kann den Radius bestimmen, die Frequenz und auch wie die Höhe und Breite der Kugel, dadurch kann man zum Beispiel auch Ovale formen. 
-	\subsubsection*{Tube:}
+	\subsubsection*{\textit{Tube:}}
 	Ein Tube ist ein einfacher Kegel. Häufig genutzte Parameter: 
 	 	\begin{itemize}
 	 		\item Radius - Radius der Tube. 
@@ -420,7 +421,7 @@ linkcolor=green
 	 	\end{itemize} 
 	
 	\subsection*{Utility:}
-	\subsubsection*{Convert:}
+	\subsubsection*{\textit{Convert:}}
 	Konvertiert eine Geometrie Art zu einer anderen Geometrie Art
 	\begin{itemize}
 		\item From Type - Welche Art die Geometrie hat
@@ -435,26 +436,137 @@ linkcolor=green
 		\item V Order - Spline-Reihenfolge von Kurven und Flächen in V
 		\item Interpolate Through Hulls - Die Form der Geometrie wird übernommen, deaktiviert U \& V
 	\end{itemize}
-	\subsubsection*{Copy Stamp:}
+	\subsubsection*{\textit{Copy Stamp:}}
 	Copy besitzt zwei Hauptaufgaben:
 	- mehrere Kopien einer Geometrie erstellen
 	- Kopiert die erste Geometrie an Punkte der Zweiten Geometrie
 	Die einzelnen Kopien können zusätzlich mit COPY transformiert werden. 
 	Durch STAMP -> Stamp Inputs können Variablen für jede Kopie weitergeführt werden. 
-	\subsubsection*{Copy to Points:}
+	\subsubsection*{\textit{Copy to Points:}}
 	Wie der Name schon sagt, kopiert es ein Objekt (erster Input) an übergebene Punkte (zweiter Input). Wird in unserem Fall innerhalb einer Schleife genutzt
-	\subsubsection*{Merge:}
+	\subsubsection*{\textit{Merge:}}
 	Diese Node führt die Geometries aus seinen Eingaben zu einem einzigen Geometriestrom zusammen, den Sie dann durch andere Nodes senden können. Sie fügt quasi zwei Objekte zusammen. Die Merge-SOP wendet alle eingehenden Attribute auf die gesamte Eingabegeometrie an. Jede Eingabegeometrie kann ihren eigenen Satz von Attributen haben.
-	\subsubsection*{Mirror:}
+	\subsubsection*{\textit{Mirror:}}
 	Dupliziert und spiegelt das Objekt. 
-	\subsubsection*{Null:}
+	\subsubsection*{\textit{Null:}}
 	Das Null Objekt dient zum einen als Platzhalter. Es kann verwendet werden, um einen Ort im Raum der Scene zu bestimmen oder als 'Betrachtungsobjekt' als Hilfe für die Koordination in der Szene. Seine Parameter ähneln denen von 'Transformieren' und 'Verschiedenes'. Es kann ein Objekt Transformieren und hilft später besser auf das Objekt referenzieren zu können
-	\subsubsection*{For Each (begin \& End):}
+	\subsubsection*{\textit{For Each (begin \& End):}}
 	For Each beinhaltet zwei Nodes: begin und end. Der Context der Schleife steht in der Input-Node der begin-Node, was in unserem Fall unsere Punkte sind. Die For Each Schleife geht nun jeden Punkt durch und wendet die Nodes die zwischen begin und end liegen auf jeden dieser Punkte an.
 	
 	\section*{\textcolor{rosa}{Tutorials:}}
 	\subsection*{Terrain:}
-	 Siehe Word Dokument
+	\begin{enumerate}
+		\item Um unser Terrain zu erzeugen benötigen wir als aller erstes einmal ein \textbf{Feld}. Mit der \textbf{Grid-Node} erzeugen wir ein (in diesem Fall 25 x 30) Feld. Die Anzahl der \textbf{Zeilen} \& \textbf{Spalten} werden nach Gemütslage erhöht. Je höher die Anzahl, desto mehr Details (Primitives) existieren im Feld.
+		\item An unser Grid setzen wir ein Remesh, damit wir später noch einmal besser mit den Details im Feld arbeiten können.
+		\item Nach dem \textbf{Remesh} wird unser komplettes Gitter in einer Farbe eingefärbt. Die Farbe selbst ist prinzipiell egal, wichtig ist in unserem Setup der \textbf{Farbwert für Rot}. Wir benutzen hier einen Grauton, der die Basis der Szene stellt.\\
+		Wir haben damit unsere Terrain-Basis gelegt. Im folgenden werden noch spezielle Teilgebiete angefertigt.
+		\item Neben dem Basisterrain-Setup liegen unsere Teilgebiet-Nodes. Wir erschaffen hier jeweils eine \textbf{Gruppe} für Grassland und die Berge, die später generiert werden sollen. Dazu werden beide Group-Nodes jeweils in unser erstes Grid eingespeist. Wir wählen die \textbf{Base Groups}, die wir gleich weg löschen wollen, per Knopfdruck aus und drücken Enter.
+		\item An unsere Gruppen hängen wir jeweils ein \textbf{Boolean} an. Wir setzen die Basis-Gruppe B (also Grassland/Berge) und \textit{subtrahieren} A-B. Am Ende sollte nur unsere gewünschte Fläche übrigbleiben.
+		\item Diese Flächen werden anschließend wieder in Farben eingefärbt (nochmal: der \textbf{Rot-Wert} ist hier wichtig!) 
+		\item Neben Grass, Gebirge und Grundland wollen wir noch einen Pfad in unserer Szene haben. Dazu wählen wir die \textbf{Add}-Node aus und beginnen Punkte in der Scene-View zu setzen.
+		\item Da unsere Punkte und damit unser Pfad für später grob gesetzt sind können wir jetzt die Linie zu einer feineren Kurve formen. Eine häufig genannte Methode ist die \textbf{Convert}-Node, bei der unsere Punkte zu einer \textit{NURBS-Kurve} geformt werden. Wir verwenden hier jedoch \textbf{Subdivide}. Subdivide gibt uns mehr Punkte entlang unseres Pfades, da unsere Tiefe auf 3 gesetzt ist.
+		\item Egal wofür man sich entscheidet, daran wieder eine \textbf{Color}-Node anhängen und diesmal auf \textit{schwarz} setzen.\\ 
+		Damit steht jetzt unsere Karte! 
+		Jetzt wo wir die Aufteilungen für später definiert haben wollen wir unsere Teile zusammenfügen bzw. überlappen.
+		\item Hierzu wählen wir die Node \textbf{Attribute Transfer} dreimal hintereinander. Unsere Basis ist erst unser…Basisgrid! Der zweite Input ist dann unser Grassland. Attribtransfer transferiert diesen zweiten Input auf das Basisgrid und erschafft ein neues, verschmolzenes Grid. 
+		Selbes wird dann mit den Bergen und dem Pfad jeweils wiederholt.
+		Am Ende sollte ein Feld mit 4 verschiedenen farblich unterlegten Teilgebieten zu sehen sein.\\
+		\includegraphics*[width=0.8\textwidth]{graphics/Nedim2.png}\\
+		\item Wir fügen an dieser Stelle ein \textbf{Transform} ein, um unsere gesamte Szene leicht zu kippen. Das mag an anderer Stelle auch möglich sein, jedoch haben wir hier den Vorteil, dass alles was später an Generation erfolgt von dieser Schieflage ausgeht und auch wirklich nach oben zeigt!
+		\item Nach dem Transform schreiben wir mit \textbf{Attribute Wrangle} eine Expression: 
+		\begin{lstlisting}
+			f@path = @Cd.r;
+		\end{lstlisting}
+		Wir erschaffen hier also eine Float-Variable namens 'path', deren Wert mit dem Rot-Wert der einzelnen Teile belegt wird. Ergo hier bei uns alles was den Pfad darstellt bekommt den Wert 0, das Grassland den Wert 0.15, das Gebirge 1 und der Rest 0,3.
+		\item Hier wird dann anschließend das erste große vollbracht. In der \textbf{Attribute VOP}-Node sehen wir (nachdem wir in die Node reingehen) einen Haufen an Einstellungen:\\
+		\includegraphics*[width=0.9\textwidth]{graphics/Nedim1.png}\\
+		Hier wird in zwei Schritten entschieden wie viel Noise-Effekt auf unser Terrain projiziert wird. Es gibt einmal ein generelles Grundrauschen, dass der obere Pfad festlegt. Das untere \textbf{Bind} importiert unsere Path-Variable und multipliziert den jeweiligen Wert mit unserem Grundrauschen. Sprich unser Grassland bekommt ein Grundrauschen * 0.15, unser Gebirge das volle Grundrauschen und unser Pfad bleibt genauso wie er ist .
+		
+		Unser Terrain steht jetzt!\\
+		\includegraphics*[width=0.9\textwidth]{graphics/Nedim3.png}\\
+		\item Da wir Höhlen in unseren Bergen haben wollen bauen wir uns noch zwei Tunnel. Wir nehmen uns zwei \textbf{Tubes}, \textit{schließen} die End Caps  und finden Werte, die uns gefallen. Eine dreieckige Form passt zu unserer Szene später ziemlich gut, also ziehen wir die \textit{Columns auf 3 runter}. Die \textit{Height} legt die Länge unserer Röhre fest, da wir sie auf der X und Z Achse um 90° gedreht haben liegt diese auch flach auf.
+		\textit{Rows}  können bei der \textbf{Bend}-Operation wichtig sein, dazu aber dann später mehr.
+		\item Unsere Tubes bekommen dann eine Farbe, die wir später haben wollen. Der Farbwert Rot spielt hier übrigens keine Rolle mehr, da wir von dem Displacement auf dem Terrain abgekoppelt sind und unsere beiden Tunnel Geometrien \textit{später} mit dem Rest zusammenfügen.
+		\item Mit \textbf{Polybevel} runden wir unsere Tube leicht ab.
+		\item \textbf{Bend} erlaubt es uns unsere Tubes in gewünschter Richtung um eine festgelegte Achse zu biegen, in unserem Fall um 90°.
+		\item Mit \textbf{Transform} passen wir die Position auf unsere jew. gewünschte Lage an.
+		\item Anschließend \textbf{Remeshen} wir unsere Tubes um für die nächste Node
+		\item \textbf{Mountain} mehr Dreiecke zum Verformen zur Verfügung zu stellen.
+		\item Da wir beide Röhren mit der Szene in einem Schritt erschaffen wollen, \textbf{Mergen} wir diese erst um dann anschließend in einer
+		\item \textbf{Boolean}-Node die beiden Inputs Terrain und Höhlen zu vereinigen, bzw. die Schnittmengen zu entfernen. Wichtig ist hierbei, dass die Eingänge der Höhle auch direkt an der Bergen anliegen!
+		\item Dieses neue Terrain bekommt noch ein kleines Becken für unseren See, den wir im Schnelldurchlauf folgendermaßen aufbauen: 
+		Tube > Transform > Mountain > Remesh
+		\item \textbf{Booleaniere} wieder beide Teile für ein neues Gesamtmesh und die Szene sollte so aussehen:\\
+		\includegraphics*[width=\textwidth]{graphics/Nedim_See.png}\\
+		Für die nächsten paar Schritte benötigen wir wieder neue \textbf{Gruppen}. Zwar haben wir ja bereits ganz  am Anfang schon welche definiert, Houdini kann mit diesen allerdings nicht mehr arbeiten, da diese Attribute auf unser Grid wieder und wieder transferiert wurden. Also legen wir einfach neue, etwas spezifischere Gruppen an.
+		\item 
+		\begin{minipage}{0.86\textwidth}
+			Die Gruppen, die für uns relevant sind, sind:
+		\begin{itemize}
+			\item Gras
+			\item Baum
+			\item (Blumen)
+			\item Schilf
+			\item Steine
+			\item Schnee
+			\item Pfad
+		\end{itemize}
+		Diese werden alle per Group Select in der Scene View ausgewählt, um später Scatter-Points und Farben drauf setzen zu können.\\
+		\end{minipage}
+		\begin{minipage}{0.14\textwidth}
+		\includegraphics*[width=\textwidth]{graphics/Nedim25.png}
+		\end{minipage}
+		\item 
+		\begin{minipage}{0.86\textwidth}
+			Nach unseren Groups wandern wir hier in zwei Richtungen: einmal links ist unser gesamt Scatter-Point-Setup, welches uns erlaubt Objekte in der Szene einzuspeisen. Rechts färben wir unsere Szene mit den gewünschten \textit{eigentlichen Farben} ein. Da unsere Anfangsfarben soweit aber zur Szene passen sind diese jedoch alle bis auf die Weg Farbe ausgegraut.\\
+			Die Farbe des Pfades ändern wir, indem wir bei der Color-Node die Gruppe anwählen.
+		\end{minipage}
+		\begin{minipage}{0.14\textwidth}
+			\includegraphics*[width=\textwidth]{graphics/Nedim26.png}
+		\end{minipage}
+		\item \textbf{Attribute Blur} verwischt die Grenzen unseres gewählten Attributes (\textit{Cd} für Color) in der gesamten Szene.
+		\item Nach dem Aufbau unserer Grund-Terrains und dem Setzen der Farben reduzieren wir noch die Polygon-Anzahl mithilfe von \textbf{PolyReduce} auf 50%.
+		\item \textbf{Edgecusp} (bzw. \textbf{Facet}) daran gekettet sorgen für schöne Lichteffekte in unserem Low-Poly-Setup, da die Flächen härtere Übergänge bekommen.\\
+		Hieran angekettet wird nur noch ein letztes \textbf{Merge}, deshalb springen wir noch einmal zurück zur eben genannten Gabelung.\\
+		\includegraphics*[width=\textwidth]{graphics/Nedim29.png}\\
+		Dieses Setup ist ziemlich groß, jedoch passiert hier in jedem Block prinzipiell dasselbe.
+		\item Wir fangen mit einer weiteren \textbf{Color}-Node an. Diese färbt unsere gesamte Szene in schwarz ein, um in den nächsten Schritten einen möglich hohen Kontrast zu ermöglichen. Nehmen wir als Beispiel nun das Gras-Setup ganz rechts:
+		\item Unser erster Knoten ist wieder eine \textbf{Color}-Node. Hier wird eine unserer vordefinierten Gruppen ausgewählt (in diesem Fall „grass“) und die Farbe weiß auf eben nur diese Fläche, die von \textit{grass} beansprucht wird, verteilt.
+		\item Daran angeknüpft schreiben wir in \textbf{Attribute Wrangle} eine neue Float-Variable \textit{density}. \textit{Density} merkt sich wiederum die Rot-Werte aus dem ihr gegebenem Input – sprich alles was weiß markiert ist.
+		\item In \textbf{Scatter} importieren wir unser \textit{density}-Attribut und tun damit unsere Punkte deutlich dichter als gewöhnlich setzen. In unserem Gras-Block haben wir hier 5000 Punkte gesetzt, also wird später 5000-mal je ein Gras-Objekt auf einen Punkt gesetzt.
+		\item (In der \textbf{Attribute VOP} setzen wir zufällige Farben für unser Gras. Hierbei wird jedem einzelnen Punkt ein Wert zwischen 0 und 1 zugewiesen, der dann die Helligkeit bestimmt)
+		\item \textbf{Colorize} färbt dieses Farbattribut Cd dann mit einer von uns definierten Farbrampe ein.
+		\item \textbf{Attribute Randomize} nutzen wir, um diverse Attribute pro Punkt zufällig aufzusetzen. Hier bekommt jeder Punkt einmal ein pscale- und ein orient-Attribut, festgelegt durchein Minimum und Maximum ausgehend vom Originalobjekt. Bei Pscale interessiert uns nur die Höhe, wir gehen also nur in eine Dimension. Orient ist für die Rotation verantwortlich, wir benötigen hier also 4 Dimensionen, wobei die nach oben [und unten] auf 0 gesetzt sind.
+		\item In einem \textbf{For-Each-Block} wird dann unser Gras eingespeist und auf jeden einzelnen Punkt (samt vordefinierter Attribute) gesetzt.\\
+		Bei den Blumen und Bäumen kommt hier noch ein \textbf{Switch} hinzu, das durch eine Funktion zufällig aus einer Inputmenge pro Punkt das nächste Objekt auswählt.
+		\item Unsere letzte Node im Terrainsetup ist ein finales \textbf{Merge}, dass das Terrain mit den dazu gecasteten Teilobjekten vereint!	
+	\end{enumerate}
+	\subsubsection*{\textit{Bonus}}
+	\begin{minipage}{0.7\textwidth}
+		Houdini erlaubt es uns auch Parameter in Abhängigkeiten zu anderen zu setzen. Was wir also beispielsweise machen können, ist eine \textbf{Null}-Node aufzusetzen, deren Aufgabe es ist, einige Kernparameter leicht erreichbar anzupassen.\\
+		Hier können wir also die Höhe der Szene und die Anzahl der Scatter-Punkte für jedes einzelne Teilobjekt festlegen! 
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		\includegraphics*[width=\textwidth]{graphics/NedimBonus.png}
+	\end{minipage}
+	\subsubsection*{\textit{KAMERA-Drohne}}
+	Die Kamerafahrt ist vom Aufbau relativ simpel. Was wir brauchen sind:
+	\begin{itemize}
+		\item einen \textbf{Pfad}, den die Kamera entlangläuft
+		\item eine \textbf{Null}-Node, die die Position der Kamera relativ zur Zeit trackt
+		\item eine \textbf{Kamera} (duh)	
+	\end{itemize}
+	Der Aufbau des Pfads läuft genauso ab wie der innerhalb des eigentlichen Terrains. Erzeuge in einem neuen Objekt \textit{cam\_path} Punkte und schaffe eine Kurve aus diesen. Ursprünglich war gedacht, dass der Kamerafahrt exakt derselbe Pfad ist, bloß ein wenig nach oben versetzt. Wir haben jedoch einen interessanteren Weg für diese Fahrt gefunden und damit dies Punkte nochmal manuell von Hand angepasst. Neu hinzu kommt hier eine \textit{CAM\_SUB\_OUT} benannte \textbf{Null}-Node.\\
+	Zurück in der Objektansicht sehen wir noch eine weitere \textbf{Null}-Node mit dem Namen \textit{PATH\_SUBDIVIDED}. Diese wird in die \textbf{Kamera} eingespeist und sagt dieser, wie die wo langzufahren hat.\\
+	Beim Erzeugen dieser Null setzen wir den Haken bei \textit{Enable Constraints} auf ja und sehen ein kleines Feld aufploppen. Ganz rechts haben wir die Möglichkeit ein Constraint direkt zu erschaffen, alternativ machen wir das manuell in der Node selbst. Außerdem wollen wir hier einen Slider für die Kameraposition hinzufügen, diese Null steuert also die Kamera komplett.\\
+	\includegraphics*[width=0.4\textwidth]{graphics/Nedim_Kamera_Constraints.png}
+	->
+	\includegraphics*[width=0.5\textwidth]{graphics/Nedim_Kamera_CHOP_Network.png}\\
+	Klicken wir uns nun in das Constraints-\textbf{CHOP Network} rein sehen wir die \textbf{getworldspace}-Node. An diese hängen wir ein \textbf{Follow Path} an und setzen den SOP Path auf unseren Kamerapfad \textit{CAM\_SUB\_OUT} und schreiben unter \textit{Position} die Funktion ch('../../pos2'), wobei pos2 der vorher hinzugefügte float-Wert 'Position' der Null-Node ist.\\
+	In PATH setzen wir dann die Position 0 auf unser Startframe und 1 auf unser Zielframe. Den Rest dazwischen berechnet Houdini selbst.
+	
+	 
+	
 	
 	\subsection*{Wasser:}
 	\begin{minipage}{0.5\textwidth}
@@ -497,49 +609,49 @@ linkcolor=green
 	\end{minipage}
 	
 	\subsection*{Steine:}
-	Die Steine bestehen aus einem sehr simplen Aufbau von nur vier Nodes. Eine normale Sphere, die etwas gestaucht wird um die Steine etwas flacher zu gestalten. Diese wird mit einer 'Mountain' Node uneben gemacht und mit einer 'Normal' Node die Kanten eckiger gemacht, um den Low Poly Stil umzusetzen. Anschließend wird die Sphere mit einer 'Color' Node grau eingefärbt.
+	Die Steine bestehen aus einem sehr simplen Aufbau von nur vier Nodes. Eine normale \textbf{Sphere}, die etwas \textit{gestaucht} wird um die Steine etwas flacher zu gestalten. Diese wird mit einer \textbf{'Mountain'} Node uneben gemacht und mit einer \textbf{'Normal'} Node die Kanten eckiger gemacht, um den Low Poly Stil umzusetzen. Anschließend wird die Sphere mit einer \textbf{'Color'} Node grau eingefärbt.
 	
 	\subsection*{Gras:}
-	Um Gras zu modellieren gibt es wie bei allem viele verschiedene Möglichkeiten. Die einfachste davon ist es das Hair-Tool zu benutzen. Das Hair Tool ist ein eingebautes Houdini-Tool um eigentlich Fell, oder Haare zu generieren. Man kann es jedoch auch benutzen um flächendeckend realistisches Gras zu bauen. Das Hair Tool bietet neben der Einfachheit auch den Vorteil, dass die Berechnungen der Polygone von Houdini automatisiert und optimiert sind. Dadurch wird dem Problem der Performance-, was beim händischen modellieren von realistischem Gras auftritt, vorgebeugt, da man sehr schnell eine sehr hohe Anzahl an Polygonen erreicht. Da wir uns in unserem Projekt jedoch für eine Low-Poly Lösung entschieden haben, werde ich darauf nicht genauer eingehen, empfehle jedoch das Tutorial von CGI Nerd. (\url{https://youtu.be/7bRr38S59i4})
+	Um Gras zu modellieren gibt es, wie bei allem, viele verschiedene Möglichkeiten. Die einfachste davon ist es das \textbf{Hair-Tool} zu benutzen. Das Hair Tool ist ein eingebautes Houdini-Tool um eigentlich \textit{Fell}, oder \textit{Haare} zu generieren. Man kann es jedoch auch benutzen um flächendeckend realistisches Gras zu bauen. Das Hair Tool bietet neben der Einfachheit auch den Vorteil, dass die Berechnungen der Polygone von Houdini automatisiert und optimiert sind. Dadurch wird dem Problem der Performance-, was beim händischen modellieren von realistischem Gras auftritt, vorgebeugt, da man sehr schnell eine sehr hohe Anzahl an Polygonen erreicht. Da wir uns in unserem Projekt jedoch für eine Low-Poly Lösung entschieden haben, werde ich darauf nicht genauer eingehen, empfehle jedoch das Tutorial von CGI Nerd. (\url{https://youtu.be/7bRr38S59i4})
 	Für unser Projekt habe ich mich entschieden, das Gras händisch zu bauen:
 	\begin{enumerate}
-		\item Als erstes wird nur ein Grashalm modelliert. Dazu wird ein Grid mit 2 Rows benutzt. Ich habe mich für ein Größenverhältnis von 10(Länge)x1(Breite) entschieden. Außerdem habe ich die Anzahl der Columns auf 4 gesetzt, um ein eckiges Ergebnis zu erzielen, je mehr Columns hier gesetzt werden, desto 'runder' wird später die Biegung des Grashalms. Als nächstes wird das Grid mit der 'bend'-Node gebogen. Die Stärke der Biegung wird nicht als fester Wert fest gelegt, sondern erhält einen zufälligen Wert. Dies wird erreicht, indem man den Wert der in der später benutzten 'Copy Stamp'-Node referenziert. Außerdem wird das 'Taper'-Attribut gesetzt, um das Grid spitz zulaufen zu lassen. Als letztes wird der Grashalm mit der Transform-Node neu ausgerichtet. Auf jeden Fall muss er um 90 Grad in z Richtung gedreht werden, damit die Spitze nach oben zeigt. Um etwas Abwechslung in das Gras zu bringen, wird sowohl die Rotation auf der x-Achse als auch die Größe zufällig gesetzt. \\
+		\item Als erstes wird nur ein Grashalm modelliert. Dazu wird ein \textbf{Grid} mit 2 \textit{Rows} benutzt. Ich habe mich für ein Größenverhältnis von 10(Länge)x1(Breite) entschieden. Außerdem habe ich die Anzahl der \textit{Columns} auf 4 gesetzt, um ein eckiges Ergebnis zu erzielen, je mehr Columns hier gesetzt werden, desto \textit{runder} wird später die Biegung des Grashalms. Als nächstes wird das Grid mit der \textbf{bend}-Node gebogen. Die Stärke der Biegung wird nicht als fester Wert fest gelegt, sondern erhält einen \textit{zufälligen Wert}. Dies wird erreicht, indem man den Wert der in der später benutzten \textbf{Copy Stamp}-Node referenziert. Außerdem wird das \textit{Taper}-Attribut gesetzt, um das Grid spitz zulaufen zu lassen. Als letztes wird der Grashalm mit der \textbf{Transform}-Node neu ausgerichtet. Auf jeden Fall muss er um 90 Grad in z Richtung gedreht werden, damit die Spitze nach oben zeigt. Um etwas Abwechslung in das Gras zu bringen, wird sowohl die Rotation auf der x-Achse als auch die Größe zufällig gesetzt. \\
 		\includegraphics*[scale=0.47]{graphics/grass_3.jpg}
 		\includegraphics*[scale=1.4]{graphics/grass_2.jpg}
 		\item Als nächstes wird der Grashalm zu einem Grasbüschel zusammengesetzt. Dazu habe ich zwei verschiedene Dinge ausprobiert:
 		\begin{itemize}
-			\item Erster Ansatz: Ein normaler Circle als Grundfläche der um -90 Grad auf der x-Achse gedreht wird, damit er auf dem Boden liegt. Auf der Fläche werden dann mit Scatter so viele Punkte verteilt, wie man Grashalme haben möchte. Ich habe mich für 8 entschieden. 
-			\item Zweiter Ansatz: Um die Anzahl an Grashalmen zu reduzieren und trotzdem den Eindruck von flächendeckendem Gras zu erwecken bedienen sich viele Spiele dem Trick 2D Grashalme in einem Kreuz anzuordnen.\\ \\
+			\item Erster Ansatz: Ein normaler \textbf{Circle} als Grundfläche der um -90 Grad auf der x-Achse gedreht wird, damit er auf dem Boden liegt. Auf der Fläche werden dann mit \textbf{Scatter} so viele Punkte verteilt, wie man Grashalme haben möchte. Ich habe mich für 8 entschieden. 
+			\item Zweiter Ansatz: Um die Anzahl an Grashalmen zu reduzieren und trotzdem den Eindruck von flächendeckendem Gras zu erwecken, bedienen sich viele Spiele dem Trick 2D Grashalme in einem Kreuz anzuordnen.\\ \\
 			\includegraphics*[scale=0.23]{graphics/grass_cross_1.jpg}
 			\includegraphics*[scale=0.19]{graphics/grass_cross_2.jpg}\\
-			 Dies hab ich versucht nach zu bauen um zu schauen welche Version besser für unsere Zwecke geeignet ist. Dazu habe ich eine Linie aus Punkten erstellt, die Länge kann beliebig gewählt werden und die Anzahl der Punkten entspricht der halben Anzahl der Grashalme. Anschließend hab ich die Linie mit einer Transform-Node um 90 Grad um die y-Achse gedreht, und habe die transformierte- mit der ursprünglichen- Linie durch eine Merge-Node zusammengefügt. Dadurch erhält mein ein Kreuz aus Punkten. Um die Punkte im Screenshot besser sichtbar zu machen, habe ich sie mit einer Color-Node grün eingefärbt.\\
+			 Dies hab ich versucht nach zu bauen, um zu schauen welche Version besser für unsere Zwecke geeignet ist. Dazu habe ich eine Linie\textbf{Linie} aus \textit{Points} erstellt: die \textit{Länge} kann beliebig gewählt werden und die Anzahl der Points entspricht der halben Anzahl der Grashalme. Anschließend hab ich die Linie mit einer \textbf{Transform}-Node um 90 Grad um die y-Achse gedreht, und habe die transformierte- mit der ursprünglichen- Linie durch eine Merge\textbf{Merge}-Node zusammengefügt. Dadurch erhält mein ein Kreuz aus Punkten. Um die Punkte im Screenshot besser sichtbar zu machen, habe ich sie mit einer \textbf{Color}-Node grün eingefärbt.\\
 			 \includegraphics*[scale=1]{graphics/cross.jpg}
 			 \includegraphics*[scale=0.76]{graphics/cross_Node.jpg}
 			 \item 		
 			 \begin{minipage}{0.4\textwidth}
-			 	Als letztes wird der Grashalm mit einer 'Copy Stamp'-Node auf jeden Punkt von entweder dem Kreis, oder dem Kreuz gesetzt. Als Stamp-Input werden die drei Variablen für die Rotation, die Größe und die Biegung gesetzt.\\
+			 	Als letztes wird der Grashalm mit einer \textbf{Copy Stamp}-Node auf jeden Punkt von entweder dem Kreis, oder dem Kreuz gesetzt. Als Stamp-Input werden die drei Variablen für die Rotation, die Größe und die Biegung gesetzt.\\
 			 \end{minipage}
 			 \begin{minipage}{0.5\textwidth}
 			 	\includegraphics[width=\textwidth]{graphics/copy_stamp.jpg}
 			 \end{minipage} 
 		\end{itemize}
 
-		Mit der Switch Node kann nun zwischen den beiden Versionen frei gewählt werden. 
-		Die Variable kann in den Parametern der vorher genannten Nodes über den angegebenen Namen referenziert werden. Durch das rand(@ptnum) wird eine zufällige Zahl für jeden Punkt generiert. Durch fit werden die Werte einem angegebenen Zahlenbereich zugeordnet. fit(n, oldmin, oldmax, newmin, newmax) wird verwendet um eine beliebige Zahl, in unserem Fall die Nummer des Punktes, aus einem Zahlenbereich einem anderen Bereich zuzuordnen. Am Schluss hängen wir eine Null-Node an. \\
+		Mit der \textbf{Switch Node} kann nun zwischen den beiden Versionen frei gewählt werden. 
+		Die Variable kann in den Parametern der vorher genannten Nodes über den angegebenen Namen referenziert werden. Durch das rand(@ptnum) wird eine zufällige Zahl für jeden Punkt generiert. Durch fit werden die Werte einem angegebenen Zahlenbereich zugeordnet. fit(n, oldmin, oldmax, newmin, newmax) wird verwendet um eine beliebige Zahl, in unserem Fall die Nummer des Punktes, aus einem Zahlenbereich einem anderen Bereich zuzuordnen. Am Schluss hängen wir eine \textbf{Null-Node} an um später von außen einfacher auf das Gras zugreifen zu können. \\
 		\includegraphics*[scale=0.3]{graphics/grass_final.jpg}
 		\includegraphics*[scale=0.53]{graphics/grass_1.jpg}\\
-		In dem wir alle Nodes in einem Subnet speichern, können wir von dort aus auf ausgewählte Parameter zugreifen und diese übersichtlich anpassen.\\
+		In dem wir alle Nodes in einem \textbf{Subnet} speichern, können wir von dort aus auf ausgewählte Parameter zugreifen und diese übersichtlich anpassen.\\
 		\includegraphics*[width=\textwidth]{graphics/subnet.jpg}
 	\end{enumerate}
 	
 	\subsection*{Schilfrohr:}
 	Das Schilfrohr besteht aus drei Teilen: Die Blüte, der Stiel und eine Fläche um wie bei dem Gras mehrere Stiele zusammen zu setzen.
-	\subsubsection*{Blüte:}
-	Die Blüte besteht aus einer Polygon Tube, der Radius und die Höhe kann beliebig gesetzt werden, sollte aber im Verhältnis zum Stiel stehen. Ich habe mich für einen Radius von 0.037 und eine Höhe von 0.27 entschieden. Die End-Caps sind an. Damit die Blüte rund wird, habe ich die Columns relativ hoch, auf 12, gestellt.\\
-	Anschließend werden die End Caps mit der Polybevel Node abgerundet. Ich habe die Distanz auf 0.044 und die Divisions auf 3 gesetzt. So erhalten wir eine TikTak ähnliche Form.\\ 
-	Diese wird mit der Color Node braun gefärbt und anschließend mit einer Transform Node auf der y-Achse so weit nach oben geschoben, bis sie auf den Stiel passt. Ich fand den Wert 0.34 für mein Beispiel passend.\\ 
-	Anschließend verwende ich die remesh Node, um danach mit der Mountain Node die Blüte etwas deformieren zu können. Ich wollte keine große Veränderung, sondern nur dass die Blüte etwas uneben wird. Daher habe ich die Werte mit einer height von 0.02 und einer Element Size von 0.0001 sehr niedrig gesetzt.\\ 
-	Um dem Low Poly Stil gerecht zu werden, verwende ich zum Schluss eine normal Node, welche dafür sorgt, dass die Blüte eckiger aussieht.\\
+	\subsubsection*{\textit{Blüte:}}
+	Die Blüte besteht aus einer \textbf{Polygon Tube}, der \textit{Radius} und die \textit{Höhe} kann beliebig gesetzt werden, sollte aber im Verhältnis zum Stiel stehen. Ich habe mich für einen Radius von 0.037 und eine Höhe von 0.27 entschieden. Die \textit{End-Caps} sind an. Damit die Blüte rund wird, habe ich die \textit{Columns} relativ hoch, auf 12, gestellt.\\
+	Anschließend werden die End Caps mit der \textbf{Polybevel}-Node abgerundet. Ich habe die \textit{Distanz} auf 0.044 und die \textit{Divisions} auf 3 gesetzt. So erhalten wir eine TikTak ähnliche Form.\\ 
+	Diese wird mit der \textbf{Color}-Node braun gefärbt und anschließend mit einer \textbf{Transform}-Node auf der y-Achse so weit nach oben geschoben, bis sie auf den Stiel passt. Ich fand den Wert 0.34 für mein Beispiel passend.\\ 
+	Anschließend verwende ich die \textbf{remesh}-Node, um danach mit der \textbf{Mountain}-Node die Blüte etwas deformieren zu können. Ich wollte keine große Veränderung, sondern nur dass die Blüte etwas uneben wird. Daher habe ich die Werte mit einer \textit{height} von 0.02 und einer \textit{Element Size} von 0.0001 sehr niedrig gesetzt.\\ 
+	Um dem Low Poly Stil gerecht zu werden, verwende ich zum Schluss eine \textbf{normal}-Node, welche dafür sorgt, dass die Blüte eckiger aussieht.\\
 	\begin{minipage}{0.5\textwidth}
 		Das Network und die Blüte sehen dann in etwa so aus:
 	\end{minipage}
@@ -547,17 +659,17 @@ linkcolor=green
 		\includegraphics[width=0.28\textwidth]{graphics/bluete_node.jpg}
 		\includegraphics[width=0.25\textwidth]{graphics/bluete.jpg}
 	\end{minipage}
-	\subsubsection*{Stiel:}
-	Der Aufbau des Stiels ist ähnlich dem der Blüte jedoch viel einfacher, er besteht nur aus einer Tube. Die Höhe habe ich auf 1 gesetzt und die Columns gerade so hoch, dass der Stiel rund wird. Die Anzahl der Rows habe ich relativ hoch, auf 41, gesetzt, damit später beim Biegen des Stiels gute Ergebnisse erzielt werden können. Anschließend habe ich den Stiel mit einer Color Node grün gefärbt.
-	\subsubsection*{Zusammenfügen:}
-	Als erstes wird die Blüte und der Stiel mit Hilfe einer boolean Node zu einem Objekt zusammengefügt, welches dann mit Bend gebogen werden kann. Der Winkel der Biegung wird, wie bei dem Gras, durch das Referenzieren eines Attributes in der Copy Stamp Node zufällig gesetzt. Das gleiche geschieht mit Hilfe einer Transform Node für die Größe der Stiele. Außerdem wird mit der Transform Node die Pflanze nach oben verschoben, bis sie auf dem Boden steht. Dies passiert prozedural, indem der y-Translate-Wert die Höhe des Stiels referenziert. So wird die Pflanze immer genau um die Hälfte der Höhe nach oben verschoben, und ist immer am Boden ausgerichtet, auch wenn sich die Höhe des Stiels ändert. \\
+	\subsubsection*{\textit{Stiel:}}
+	Der Aufbau des Stiels ist ähnlich dem der Blüte jedoch viel einfacher, er besteht nur aus einer \textbf{Tube}. Die \textit{Höhe} habe ich auf 1 gesetzt und die \textit{Columns} gerade so hoch, dass der Stiel rund wird. Die Anzahl der \textit{Rows} habe ich relativ hoch, auf 41, gesetzt, damit später beim Biegen des Stiels gute Ergebnisse erzielt werden können. Anschließend habe ich den Stiel mit einer \textbf{Color}-Node grün gefärbt.
+	\subsubsection*{\textit{Zusammenfügen:}}
+	Als erstes wird die Blüte und der Stiel mit Hilfe einer \textbf{boolean}-Node zu einem Objekt zusammengefügt, welches dann mit \textbf{Bend} gebogen werden kann. Der Winkel der Biegung wird, wie bei dem Gras, durch das Referenzieren eines Attributes in der Copy Stamp Node zufällig gesetzt. Das gleiche geschieht mit Hilfe einer \textbf{Transform}-Node für die Größe der Stiele. Außerdem wird mit der Transform Node die Pflanze nach oben verschoben, bis sie auf dem Boden steht. Dies passiert prozedural, indem der y-\textit{translate}-Wert die Höhe des Stiels referenziert. So wird die Pflanze immer genau um die Hälfte der Höhe nach oben verschoben, und ist immer am Boden ausgerichtet, auch wenn sich die Höhe des Stiels ändert. \\
 	\includegraphics*[width=0.8\textwidth]{graphics/stiel.jpg}\\
-	Anschließend werden die Stiele, genau wie beim Gras, mit Zufallswerten auf Punkte übertragen. Diese wurden wieder mit Hilfe der Scatter Node aus einem Kreis extrahiert. Man kann mit dem Offset der Scatter Node herumspielen, bis man ein Ergebnis findet, das einem gefällt.\\
+	Anschließend werden die Stiele, genau wie beim Gras, durch eine \textbf{Copy Stamp}-Node mit Zufallswerten auf Punkte übertragen. Diese wurden wieder mit Hilfe der \textbf{Scatter}-Node aus einem Kreis extrahiert. Man kann mit dem \textit{Offset} der Scatter Node herumspielen, bis man ein Ergebnis findet, das einem gefällt.\\
 	Dies war mein Endergebnis: \\
 	\includegraphics*[width=0.6\textwidth]{graphics/schilf.jpg}\\
 	
 	\subsection*{Blumen:}
-	\subsubsection*{Blüte:}
+	\subsubsection*{\textit{Blüte:}}
 
 	Um eine einfache Blüte zu machen, brauchen wir nur eins: ein Blatt. Um ein Blatt zu erstellen, brauchen wir erstmal zwei Linien. Line2(Direktion (0;0;1); Length 0.9; Points 8) bildet die Hauptader des Blattes. Ihr fügen wir die Attribute zum Verformen des Blattes wie z.b. die Rotation, Skalierung usw. mit Hilfe der Node Attribwrangle hinzu.
 	\begin{itemize}
@@ -578,7 +690,7 @@ linkcolor=green
 		\includegraphics[width=0.7\textwidth]{graphics/blossom1.JPG}
 	\end{minipage}
 	\begin{minipage}{0.7\textwidth}
-		Anschließend nutzen wir copy um Line1 an die Punkte der Line2 zu setzen. Hier legen wir jetzt unter Stamp die bereits erwähnte curve\_loc Variable (Variable:c\_loc; Value:@curve\_loc) an. Die Linien lassen wir dazu noch rotieren um eben die Form eines Blattes zu bekommen. Dazu geben wir unter Copy dem y Wert von Rotate den Wert "fit01(@rot,90,-90)". Fertig is das Skelett des Blattes.
+		Anschließend nutzen wir copy um Line1 an die Punkte der Line2 zu setzen. Hier legen wir jetzt unter Stamp die bereits erwähnte curve\_loc Variable (Variable:c\_loc; Value:@curve\_loc) an. Die Linien lassen wir dazu noch rotieren um eben die Form eines Blattes zu bekommen. Dazu geben wir unter Copy dem y Wert von Rotate den Wert 'fit01(@rot,90,-90)'. Fertig is das Skelett des Blattes.
 	\end{minipage}
 
 	\begin{minipage}{0.5\textwidth}
@@ -602,7 +714,7 @@ linkcolor=green
 	Zum Abschluss setzen wir eine Null Node die wir BLOSSOM\_OUT nennen, um später einfacher auf die Blüte zugreifen zu können. Fertig ist unsere Blüte.\\
 	\includegraphics*[scale=0.45]{graphics/blossom4.JPG}
 	
-	\subsubsection*{Blatt:}
+	\subsubsection*{\textit{Blatt:}}
 	Das Blatt könnte man jetzt auf dieselbe weise wie das Blüten Blatt machen, da die Blätter am Stängel aber weniger wichtiger sind, gestalten wir dies etwas einfacher. Dazu nutzen wir L-Systeme.\\
 	\begin{minipage}{0.3\textwidth}
 		\includegraphics[width=0.9\textwidth]{graphics/leaf1.JPG}
@@ -618,7 +730,7 @@ linkcolor=green
 	Am Ende erstellen wir wieder eine Null Node LEAF\_OUT.
 	\end{minipage}
 	
-	\subsubsection*{Kern:}
+	\subsubsection*{\textit{Kern:}}
 	Da wir uns ja im LowPoly befinden, habe ich anstatt der größeren Anzahl an Kernen nur eine Sphere genommen, diese etwas verkleinert (Uniform Scale 0.2), gestaucht (Radius(0;0.4;0)) und später innerhalb der Blume braun gefärbt. Den Schluss bildet wieder eine Null Node KERNEL\_OUT.\\
 	Wenn man aber die Blume detaillierter darstellen möchte, sollte man auf die Anordnung der Kerner, welche sich Phyllotaxis nennt, achten. Diese bezieht sich auch auf die Blüten Blätter. 
 	\begin{lstlisting}[basicstyle=\scriptsize]
@@ -634,7 +746,7 @@ linkcolor=green
 			int pt = addpoint(0, pos);
 		}	
 	\end{lstlisting} 
-	\subsubsection*{Blume:}
+	\subsubsection*{\textit{Blume:}}
 	\begin{minipage}{0.5\textwidth}
 		\includegraphics[width=0.98\textwidth]{graphics/flower_three.JPG}
 	\end{minipage}
@@ -694,15 +806,15 @@ linkcolor=green
 	Mit Hilfe von Gruppen können wir die Blume nun einfärben (color). Erstmal färben wir alles Grün (\#21FF26), ohne eine Gruppe anzugeben. Die Blüte und den Kern färben wir durch Angeben der Gruppen lsysX, wobei X der jeweilige Input steht (Blüte = J; Kern = M). An Ende wie immer unser Null Node FLOWER\_OUT.
 	
 	\subsection*{Bäume:}
-	\includegraphics*[scale=0.6]{graphics/Ali1.png}
-	\includegraphics*[scale=0.9]{graphics/Ali2.png}
-	\subsubsection*{Aufbau:} 
+	\includegraphics*[scale=0.4]{graphics/Ali1.png}
+	\includegraphics*[scale=0.7]{graphics/Ali2.png}\\
+	\subsubsection*{\textit{Aufbau:}} 
 	\begin{minipage}{0.3\textwidth}
 		\includegraphics[width=0.8\textwidth]{graphics/Ali3.png}
 	\end{minipage}
 	\begin{minipage}{0.7\textwidth}
 	Wir haben uns für den Low Poly Stil entschieden. Deswegen versuchen wir den Baum so simple wie möglich zu erstellen. Am Anfang benötigt man den Tree\_Trunk\_Generator um den Stamm vom Baum zu erstellen. Ich habe mich bei dem Radius für 1.5 und bei der Länge für 20 entschieden. Wenn man den Stamm biegen möchte, kann man dies bei 'Tropism' tun. Den Bend Wert, also wie stark der Stamm gebogen sein soll, habe ich auf 10 gesetzt.  Da es nach Low Poly aussehen soll, muss man bei 'Resolution' die Resolution und die Anzahl der divisions runter stellen, damit der Stamm weniger Ecken hat, an denen er gebogen werden kann. Dadurch wird das Ergebnis 'kantiger'.
-	\end{minipage}
+	\end{minipage}\\ \\
 	\begin{minipage}{0.3\textwidth}
 	\includegraphics[width=0.8\textwidth]{graphics/Ali4.png}
 	\end{minipage}
@@ -752,7 +864,7 @@ linkcolor=green
 	\end{minipage}
 	\begin{minipage}{0.7\textwidth}
 		Letztendlich wenden wir die Tree\_Leaf\_Generator Node an. Hier kann man einstellen wie viele Blätter man haben möchte und wo sie plaziert sein sollen. Da wir eine Sphäre für mehrere Blätter haben, sollte man die 'Leaf Node Distance' ziemlich weit auseinander einstellen (bei mir auf 5) damit pro Ast nur eine Sphäre daraufgesetzt wird. Bei 'Size Ramp' stellt man auch ein wo sich die Blätter auf den Ästen befinden sollen. Diese habe ich weit nach rechts gesetzt, damit die Sphäre am Ende der Äste sind.
-	\end{minipage}
+	\end{minipage}\\ \\ \\ \\ \\
 	Der ganze Aufbau des Low Poly Baums sieht mit den Nodes folgendermaßen aus:\\
 	\includegraphics*[width=0.6\textwidth]{graphics/Ali11.png}
 \end{document}
